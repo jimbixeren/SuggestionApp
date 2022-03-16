@@ -5,8 +5,10 @@ public class UserModel
 {
 
     [BsonId]
-    [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+    [BsonRepresentation(BsonType.ObjectId)]
 
+
+    // property
     public string Id { get; set; }
 
     // til azure Identifire 
@@ -15,8 +17,8 @@ public class UserModel
     public string LastName { get; set; }
     public string DisplayName { get; set; }
     public string EmailAddress { get; set; }
-    public List<SuggestionModel> AuthoredSuggestions { get; set; } = new();
-    public List<SuggestionModel> VotedOnSuggestions { get; set; } = new();
+    public List<BasicSuggestionModel> AuthoredSuggestions { get; set; } = new();
+    public List<BasicSuggestionModel> VotedOnSuggestions { get; set; } = new();
    
 
 

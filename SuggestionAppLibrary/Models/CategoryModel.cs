@@ -7,7 +7,7 @@ public class CategoryModel
     
 
     [BsonId]
-    [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+    [BsonRepresentation(BsonType.ObjectId)]
     // Proberty
     public string Id { get; set; }
     public string CategoryName { get; set; }
